@@ -1,0 +1,52 @@
+{
+  "store":{
+      "book":[
+        {
+          "category": "reference",
+           "author": "anvesh",
+           "title": "aaa",
+           "price": 100
+        },
+        {
+          "category": "fiction",
+           "author": "suresh",
+           "title": "bbb",
+           "price": 200,
+           "isbn":  "123456"
+        },
+        {
+          "category": "love",
+           "author": "Gopi",
+           "title": "ccc",
+           "price": 300
+        },
+        {
+          "category": "dramatic",
+           "author": "Mahesh",
+           "title": "ddd",
+           "price": 400,
+           "isbn": "7890123"
+        }
+   ],
+   "bicycle":{
+             "color":"red",
+             "price": 2000
+             } 
+},
+  "expensive": 10
+}
+
+// $..author (or) $.store.book[*].author     All authors    here '$' represents head and . represents next node
+// $.store.book[0].author                    Book1 author  
+// $.store.book[0]                           All the details of first book
+// $.store.book                              All book details
+// $.store.book[0,1]                         First two book details
+// $.store.book[0,1].author                  First two books authors
+// $.store.book[0:]                          All the books after first 
+// $.store.book[1:]                          All the books after second
+// $.store.book[-1:]                         Last book
+// $.store.book[-2:]                         Last two books
+// $.store.book[?(@.isbn)]                   Books which are having 'isbn'
+// $.store.book[?(@.category=reference)]     All books with category as reference
+// $.store.book[?(@.price>200)]              All books price greater than 200
+// $.store.book[?(@.price<200)]              All books price less than 200
